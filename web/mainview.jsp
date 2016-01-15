@@ -180,6 +180,7 @@
                                 infowindowarr.push(marker.info);
                                 bounds.extend(marker.position);
 
+
                                 google.maps.event.addListener(marker, 'click', function() {
                                     for(var idx=0;idx<infowindowarr.length;idx++){
                                         infowindowarr[idx].close();
