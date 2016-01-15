@@ -179,6 +179,8 @@
 //                    }
 //                }
 //                initMap();
+                var infowindowsarr=[];
+
 
                 function geocodeLatLng(geocoder, lat, lng, obj,titleinfo, next){
                     var latlng = {lat: lat, lng: lng};
@@ -191,11 +193,16 @@
                                 marker.info = new google.maps.InfoWindow({
                                     content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
                                 });
+                                infowindowsarr.push(marker.info);
                                 bounds.extend(marker.position);
 
                                 google.maps.event.addListener(marker, 'click', function() {
+                                    for(var i=0;i<infowindowsarr.length;i++){
+                                        infowindowsarr[i].close();
+                                    }
                                     marker.info.open(map, marker);
                                 });
+
                                 $(obj).text (results[1].formatted_address);
                             }
 
