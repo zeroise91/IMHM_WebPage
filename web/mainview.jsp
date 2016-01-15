@@ -196,6 +196,7 @@
                                 infowindowsarr.push(marker.info);
                                 bounds.extend(marker.position);
 
+
                                 google.maps.event.addListener(marker, 'click', function() {
                                     for(var i=0;i<infowindowsarr.length;i++){
                                         infowindowsarr[i].close();
