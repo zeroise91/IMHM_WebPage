@@ -177,6 +177,7 @@
                                 marker.info = new google.maps.InfoWindow({
                                     content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
                                 });
+
                                 infowindowarr.push(marker.info);
                                 bounds.extend(marker.position);
 
