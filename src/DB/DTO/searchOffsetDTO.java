@@ -8,7 +8,6 @@ public class searchOffsetDTO {
     private Integer limit = null;
     private Integer offset=null;
 
-
     public searchOffsetDTO(String id, Integer limit, Integer offset) {
         this.id = id;
         this.limit = limit;
