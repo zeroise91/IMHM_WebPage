@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f150f5-5b83-4a0b-85a6-801695c10fc4" name="Default" comment="" />
+    <list default="true" id="a9f150f5-5b83-4a0b-85a6-801695c10fc4" name="Default" comment="test">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mainview.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mainview.jsp" />
+    </list>
     <ignored path="shazam.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,160 +38,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mybatis/mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="25" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="25" />
-              <folding>
-                <marker date="1452879905866" expanded="true" signature="271:474" placeholder="insert into TABLE... " />
-                <marker date="1452879905866" expanded="true" signature="578:733" placeholder="SELECT TOP 1... " />
-                <marker date="1452879905866" expanded="true" signature="578:754" placeholder="SELECT TOP 1... " />
-                <marker date="1452879905866" expanded="true" signature="858:1088" placeholder="SELECT -- [I... " />
-                <marker date="1452879905866" expanded="true" signature="1088:1089" placeholder="SELECT [Albu... " />
-                <marker date="1452879905866" expanded="true" signature="1196:1282" placeholder="SELECT [Albu... " />
-                <marker date="1452879905866" expanded="true" signature="1196:1316" placeholder="SELECT [Titl... " />
-                <marker date="1452879905866" expanded="true" signature="1439:1791" placeholder="Select C.Tit... " />
-                <marker date="1452879905866" expanded="true" signature="1439:1822" placeholder="Select C.Tit... " />
-                <marker date="1452879905866" expanded="true" signature="1439:1853" placeholder="Select C.Tit... " />
-                <marker date="1452879905866" expanded="true" signature="1559:1791" placeholder="Select C.Tit... " />
-                <marker date="1452879905866" expanded="true" signature="1965:2028" placeholder="SELECT TOP 1... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainview.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainview.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6785714">
-              <caret line="350" column="31" selection-start-line="350" selection-start-column="31" selection-end-line="350" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.588907">
+              <caret line="199" column="64" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="64" />
               <folding>
-                <marker date="1452866726083" expanded="true" signature="10350:10549" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10726" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10727" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10790" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10800" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10801" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10864" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10883" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:10978" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11040" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11041" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11103" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11119" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11120" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11234" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11235" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11291" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11292" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11347" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11426" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:11709" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:12365" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:12783" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:12845" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:12868" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10350:13224" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10411:10549" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10486:10549" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10653:10668" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="10964:10977" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="11682:11709" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="12847:12868" placeholder="..." />
-                <marker date="1452866726083" expanded="true" signature="13140:13158" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:10839" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11016" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11017" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11080" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11090" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11091" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11154" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11173" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11268" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11330" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11331" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11393" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11409" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11410" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11524" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11525" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11581" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11582" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11637" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11716" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:11999" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:12655" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:13073" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:13135" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:13158" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10640:13514" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10701:10839" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10776:10839" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="10943:10958" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="11254:11267" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="11972:11999" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="13137:13158" placeholder="..." />
+                <marker date="1452892898918" expanded="true" signature="13430:13448" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AccessManager/RegisterServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DB/DAO/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AccessManager/LoginServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#1782#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HistroyDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sitemap.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bootstrap-3.3.6/docs/sitemap.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3392857">
-              <caret line="1" column="190" selection-start-line="1" selection-start-column="190" selection-end-line="1" selection-end-column="190" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="javascript.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bootstrap-3.3.6/docs/_includes/nav/javascript.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.232143">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateFormatter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Config/DateFormatter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogoutServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5928237">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -252,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/DB/DTO/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/DB/DAO/ImageDAO.java" />
         <option value="$PROJECT_DIR$/shazam.iml" />
-        <option value="$PROJECT_DIR$/src/DB/DTO/searchOffsetDTO.java" />
         <option value="$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java" />
         <option value="$PROJECT_DIR$/web/test.txt" />
         <option value="$PROJECT_DIR$/web/test.jsp" />
@@ -260,15 +148,16 @@
         <option value="$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/AccessManager/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/web/mainview.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/mobile/index.html" />
         <option value="$PROJECT_DIR$/src/mybatis/mapper.xml" />
         <option value="$PROJECT_DIR$/src/AccessManager/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/src/DB/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/Config/DateFormatter.java" />
-        <option value="$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java" />
         <option value="$PROJECT_DIR$/web/bootstrap-3.3.6/docs/sitemap.xml" />
+        <option value="$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java" />
+        <option value="$PROJECT_DIR$/src/DB/DTO/searchOffsetDTO.java" />
+        <option value="$PROJECT_DIR$/web/mainview.jsp" />
       </list>
     </option>
   </component>
@@ -299,6 +188,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -343,6 +251,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shazam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shazam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -359,9 +281,25 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;Database.Settings&#10;settings&#9;ACTION&#9;Database.Settings" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="66" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="71" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="71" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="695" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="70" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="70" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="693" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1053,7 +991,7 @@
       <workItem from="1452756799318" duration="11264000" />
       <workItem from="1452866718467" duration="7209000" />
       <workItem from="1452886816282" duration="1721000" />
-      <workItem from="1452888560800" duration="2671000" />
+      <workItem from="1452888560800" duration="5717000" />
     </task>
     <task id="LOCAL-00001" summary="1st Commit">
       <created>1452889418463</created>
@@ -1061,11 +999,29 @@
       <option name="project" value="LOCAL" />
       <updated>1452889418463</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1452891504985</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1452891504985</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test2">
+      <created>1452891984887</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1452891984887</updated>
+    </task>
+    <task id="LOCAL-00004" summary="infowindow 하나만 뜨게함">
+      <created>1452893055071</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452893055071</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312704000" />
+    <option name="totallyTimeSpent" value="315750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1082,15 +1038,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31744313" sideWeight="0.49307036" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31744313" sideWeight="0.49093816" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27410617" sideWeight="0.52558637" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.48667377" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27410617" sideWeight="0.52771854" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.4824094" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27410617" sideWeight="0.47441363" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27410617" sideWeight="0.47228146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.49573562" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24147122" sideWeight="0.43288085" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1991744" sideWeight="0.5671192" order="3" side_tool="true" content_ui="tabs" />
@@ -1121,8 +1077,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="1st Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st Commit" />
+    <MESSAGE value="test" />
+    <MESSAGE value="test2" />
+    <MESSAGE value="infowindow 하나만 뜨게함" />
+    <option name="LAST_COMMIT_MESSAGE" value="infowindow 하나만 뜨게함" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1146,19 +1107,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
           <line>154</line>
           <properties />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>251</line>
+          <line>258</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -1169,22 +1124,10 @@
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>202</line>
-          <properties />
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/test.jsp</url>
           <line>58</line>
           <properties />
           <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>185</line>
-          <properties />
-          <option name="timeStamp" value="113" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1384,13 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DTO/searchOffsetDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shazam.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41368586">
@@ -1540,16 +1476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bootstrap-3.3.6/docs/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3392857">
@@ -1566,48 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714">
-          <caret line="350" column="31" selection-start-line="350" selection-start-column="31" selection-end-line="350" selection-end-column="31" />
-          <folding>
-            <marker date="1452866726083" expanded="true" signature="10350:10549" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10726" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10727" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10790" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10800" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10801" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10864" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10883" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:10978" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11040" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11041" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11103" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11119" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11120" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11234" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11235" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11291" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11292" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11347" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11426" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:11709" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:12365" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:12783" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:12845" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:12868" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10350:13224" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10411:10549" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10486:10549" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10653:10668" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="10964:10977" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="11682:11709" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="12847:12868" placeholder="..." />
-            <marker date="1452866726083" expanded="true" signature="13140:13158" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/DateFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1621,9 +1505,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5928237">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DTO/searchOffsetDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8023649">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.588907">
+          <caret line="199" column="64" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="64" />
+          <folding>
+            <marker date="1452892898918" expanded="true" signature="10640:10839" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11016" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11017" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11080" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11090" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11091" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11154" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11173" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11268" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11330" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11331" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11393" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11409" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11410" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11524" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11525" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11581" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11582" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11637" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11716" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:11999" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:12655" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:13073" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:13135" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:13158" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10640:13514" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10701:10839" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10776:10839" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="10943:10958" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="11254:11267" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="11972:11999" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="13137:13158" placeholder="..." />
+            <marker date="1452892898918" expanded="true" signature="13430:13448" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
