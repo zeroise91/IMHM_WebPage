@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="defaultStatementTimeout" value="5"/>
+    </settings>
+    <!--드라이버 URL 유저 비번 설정 필요-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+                <!--<property name="driver" value="com.mysql.jdbc.Driver"/>-->
+                <property name="url" value="jdbc:sqlserver://sualab.ery.wo.tc:14303;databaseName=IHMHdb"/>
+                <property name="poolMaximumActiveConnections" value="50"/>
+                <property name="poolMaximumIdleConnections" value="20"/>
+                <property name="poolMaximumCheckoutTime" value="10000"/>
+                <property name="poolTimeToWait" value="15000"/>
+                <property name="username" value="sa"/>
+                <property name="password" value="1423"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+    <mappers>
+        <mapper resource="mybatis/mapper.xml"/>
+    </mappers>
+
+
+</configuration>

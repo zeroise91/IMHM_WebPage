@@ -1,0 +1,52 @@
+      <%
+
+                                List<HistroyDTO> historyset = dao.getHistroyList(idparam,limit,offset);
+                                //for 순회 나중에는 has next로 가야할듯?
+                                for (HistroyDTO dto:historyset){
+                                    i++;
+                            %>
+                            <div class="thumbnail" id="<%="box"+i%>">
+                                <div class="row" >
+                                    <div class="col-md-4">
+
+                                        <img class="img-responsive thumbnail" src="/loadimage?titlename=<%=dto.getMusicIdx()%>" alt="TEST" style="margin: 0 auto;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="table-responsive">
+                                            <table class="table" style="border: none;">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="row ">Title</th>
+                                                    <td><%=dto.getTitle()%></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="row ">Artist</th>
+                                                    <td><%=dto.getArtist()%></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="row ">Album</th>
+                                                    <td><%=dto.getAlbumname()%></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="row ">Date</th>
+                                                    <td><%= dto.getSearch_date()%></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="row ">Location</th>
+                                                    <td class="location"><%=dto.getLongtitude() +" "+dto.getLatitude()%></td>
+                                                </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr style="border-color: #00cdcd">
+                                <p  align="right"> <a href="http://www.melon.com/search/total/index.htm?q=<%=dto.getTitle()+" "+dto.getArtist()%>&section=&ipath=srch_form" class="btn btn-success" role="button" target="_blank" style="margin-right: 10px">외부음원 듣기</a></p>
+                            </div>
+                            <%
+                                }// 순회 막판
+                                limit+=offset;
+                            %>
