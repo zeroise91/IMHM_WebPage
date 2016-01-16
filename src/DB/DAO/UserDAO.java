@@ -21,28 +21,37 @@ public class UserDAO {
     InputStream inputStream = null;
 
     public List<UserDTO> checkLogin(String id,String pw)throws Exception{
-        getSession();
+
+        inputStream = inputStream==null? Resources.getResourceAsStream(Config.mybatispath):inputStream;
+        sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
+        SqlSession session=sessionfactory.openSession(false);
         List<UserDTO> reslist;
         reslist= session.selectList("login", new UserInfoDTO(id, pw));
 
+        session.close();
         closeSession();
         return reslist;
     }
 
     public boolean canInsertId(String id){
-        boolean exist=false;
+        boolean exist = false;
+        SqlSession session = null;
         try {
-            getSession();
+
+            inputStream = inputStream==null? Resources.getResourceAsStream(Config.mybatispath):inputStream;
+            sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
+            session=sessionfactory.openSession(false);
 
             List<String> list=session.selectList("getIdList",id);
             if(list==null||list.isEmpty())
                 exist=true;
             closeSession();
-
+            session.close();
         } catch (Exception e) {
             e.printStackTrace();
             exist = false;
         }finally {
+            session.close();
             return exist;
         }
 
@@ -50,13 +59,15 @@ public class UserDAO {
 
     public int registerUser(UserDTO dto){
         int x =-1;
+        SqlSession session = null;
         try {
-            getSession();
+            inputStream = inputStream==null? Resources.getResourceAsStream(Config.mybatispath):inputStream;
+            sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
+             session=sessionfactory.openSession(false);
+
             x=session.insert("register",dto);
             if(x==1){
                 session.commit();
-            }else{
-                session.rollback();
             }
 
         } catch (Exception e) {
@@ -64,25 +75,19 @@ public class UserDAO {
             session.rollback();
         }
         finally {
+            session.close();
             return x;
         }
 
     }
 
-    private SqlSession getSession() throws Exception {
-        if(session == null){
-                inputStream = inputStream==null? Resources.getResourceAsStream(Config.mybatispath):inputStream;
-                sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
-                session=sessionfactory.openSession(false);
-        }
-        return session;
-    }
+
 
     private void closeSession(){
-      if(session!=null) session.close();
         if(inputStream!=null) {
             try {
                 inputStream.close();
+                inputStream=null;
             } catch (IOException e) {
                 e.printStackTrace();
             }

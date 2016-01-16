@@ -28,15 +28,7 @@ SELECT TOP 10 [Id]
 
     <select id="searchImage" resultType="DB.DTO.ImageDTO" parameterType="String">
       SELECT
---        [Id]
---       ,[Title]
---       ,[Artist]
---       ,[AlbumName]
---       ,[Length]
---       ,[Genre]
       [AlbumImage]
---       ,[MetaData]
---       ,[ReleaseDate]
   FROM [IHMHdb].[dbo].[Music]
   where [Id]=#{id}
     </select>
@@ -61,8 +53,9 @@ SELECT TOP 10 [Id]
     </select>
 
     <select id="getIdList" parameterType="java.lang.String" resultType="java.lang.String">
-    SELECT TOP 1000
+    SELECT
       [Username]
     FROM [IHMHdb].[dbo].[User]
+    where [Username]=#{id}
     </select>
 </mapper>

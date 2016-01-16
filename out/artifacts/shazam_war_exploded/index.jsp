@@ -130,12 +130,12 @@
 
                 <div class="form-group">
                   <label for="reg_password" class="sr-only">Password</label>
-                  <input type="password" class="form-control" id="reg_password" name="pw" placeholder="password" minlength="8" maxlength="128" required >
+                  <input type="password" class="form-control" id="reg_password" name="pw" placeholder="password" minlength="4" maxlength="128" required >
                 </div>
 
                 <div class="form-group">
                   <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                  <input type="password" class="form-control" id="reg_password_confirm" name="confirm_pw" placeholder="confirm password" minlength="8"  maxlength="128"  required>
+                  <input type="password" class="form-control" id="reg_password_confirm" name="confirm_pw" placeholder="confirm password" minlength="4"  maxlength="128"  required>
                 </div>
 
                 <div class="form-group">
@@ -151,7 +151,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick='resetModal()'>close</button>
         <button type="submit" class="btn btn-primary "  name="reg_email_button" id="reg_button"  ><span id="_test">Resister</span></button>
 
       </div>
@@ -160,6 +160,17 @@
     </div> <!-- 모달 콘텐츠 -->
   </div> <!-- 모달 다이얼로그 -->
 </div> <!-- 모달 전체 윈도우 -->
+
+  <script>
+   $('#myModal').on('hidden.bs.modal',function(e){
+     $('#reg_form').each(function(){
+       this.reset();
+     });
+     $('#result_alert').removeClass().addClass('alert').css('display','none');
+     $("#_test").text("Register");
+
+   });
+  </script>
 <script>
 
 
@@ -208,13 +219,20 @@
       }).responseText;
       res=JSON.parse(res);
      if(res.status=='accepted'){
+       $("#result_alert").addClass('alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
 
        $("#_test").text("Registered");
        $("#reg_button").addClass("btn-success");
        $("#reg_button").attr("disabled",true);
        }
       else{
+       if(res.status=='IdExists')
+        $("#result_alert").addClass('alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
+       if(res.status=='error')
+        $("#result_alert").addClass('alert-danger').text("DB ERROR").css('display','inherit');
+
        $("#_test").text("try again");
+
 
      }
         return false;
@@ -240,12 +258,12 @@
       },
       pw: {
         required:'반드시 입력해주세요',
-        minlength:'8자 이상 입력해주세요'
+        minlength:'4자 이상 입력해주세요'
       },
       confirm_pw: {
         required: '반드시 입력해주세요',
         equalTo: '비밀번호가 다릅니다',
-        minlength:'8자 이상 입력해주세요'
+        minlength:'4자 이상 입력해주세요'
       },
       nick: {required:'별명을 설정해주세요'}
 

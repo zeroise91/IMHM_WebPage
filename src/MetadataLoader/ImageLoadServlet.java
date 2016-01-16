@@ -27,7 +27,7 @@ public class ImageLoadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("image/png");
-        String title= request.getParameter("titlename");
+        String title= request.getParameter("idx");
         ImageDAO dao = new ImageDAO();
 
         List<ImageDTO> dto= dao.getImage(title);

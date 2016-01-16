@@ -37,7 +37,6 @@ public class RegisterServlet extends HttpServlet {
             }
             else{
                 int res= dao.registerUser(new UserDTO(id,pw,nick));
-//        System.out.println(String.format("Register:  id %s pw %s nick %s res: %d",id,pw,nick,res));
 
                 switch (res) {
                     case 1: {
@@ -51,12 +50,12 @@ public class RegisterServlet extends HttpServlet {
                 }
             }
         } catch (Exception e) {
-
             e.printStackTrace();
             obj.clear();
             obj.put("status", "error");
         }finally {
             response.getWriter().write(obj.toJSONString());
+            System.out.println(obj.toJSONString());
         }
 
     }

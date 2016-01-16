@@ -251,7 +251,7 @@
                                         div2.innerHTML="<div class='thumbnail'>"+
                                         "<div class='row' >"+
                                                 "<div class='col-md-4'>"+
-                                                "<img class='img-responsive thumbnail' src='/loadimage?titlename="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
+                                                "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
                                                 "</div>"+
                                                 "<div class='col-md-8'>"+
                                                 "<div class='table-responsive'>"+

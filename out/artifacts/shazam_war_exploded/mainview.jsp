@@ -164,23 +164,7 @@
                 var bounds = new google.maps.LatLngBounds();
                 var marker_icon = 'images/1452705802_map-marker.png';
                 var geocoder = new google.maps.Geocoder;
-
-//                function initMap() {
-//
-//
-//                    function attachSecretMessage(marker, secretMessage) {
-//                        var infowindow = new google.maps.InfoWindow({
-//                            content: '<div>hello world</div>'
-//                        });
-//
-//                        marker.addListener('click', function () {
-//                            infowindow.open(marker.get('map'), marker);
-//                        });
-//                    }
-//                }
-//                initMap();
-                var infowindowsarr=[];
-
+                var infowindowarr=[];
 
                 function geocodeLatLng(geocoder, lat, lng, obj,titleinfo, next){
                     var latlng = {lat: lat, lng: lng};
@@ -189,24 +173,23 @@
                             if (results[1]) {
                                 var marker = new google.maps.Marker({position: latlng, map: map ,icon:marker_icon});
 
-
+                                // 윈도우는 하나만 보게 하자
                                 marker.info = new google.maps.InfoWindow({
                                     content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
                                 });
-                                infowindowsarr.push(marker.info);
+
+                                infowindowarr.push(marker.info);
                                 bounds.extend(marker.position);
 
+
                                 google.maps.event.addListener(marker, 'click', function() {
-                                    for(var i=0;i<infowindowsarr.length;i++){
-                                        infowindowsarr[i].close();
+                                    for(var idx=0;idx<infowindowarr.length;idx++){
+                                        infowindowarr[idx].close();
                                     }
+
                                     marker.info.open(map, marker);
-                                });
 
-                                google.maps.event.addListener(marker.info, 'click', function() {
-                                    marker.info.close();
                                 });
-
                                 $(obj).text (results[1].formatted_address);
                             }
 
@@ -268,7 +251,7 @@
                                         div2.innerHTML="<div class='thumbnail'>"+
                                         "<div class='row' >"+
                                                 "<div class='col-md-4'>"+
-                                                "<img class='img-responsive thumbnail' src='/loadimage?titlename="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
+                                                "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
                                                 "</div>"+
                                                 "<div class='col-md-8'>"+
                                                 "<div class='table-responsive'>"+
