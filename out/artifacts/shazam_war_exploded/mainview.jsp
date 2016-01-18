@@ -94,14 +94,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">IMHM</a>
+                        <a class="navbar-brand" href="#" style="color:white">IMHM</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#map">MAP</a></li>
-                            <li><a href="#historyContainer">History</a></li>
-
+                            <li><a href="#map" style="color:white">MAP</a></li>
+                            <li><a href="#historyContainer" style="color:white">History</a></li>
+                            <li><a href="#more_button" style="color:white">More</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="index.jsp" onclick="logout">Log out <span class="sr-only">(current)</span></a></li>

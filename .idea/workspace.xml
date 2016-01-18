@@ -8,18 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a9f150f5-5b83-4a0b-85a6-801695c10fc4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/WEB-INF/classes/mybatis/mapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/WEB-INF/classes/mybatis/mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mainview.jsp" afterPath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mainview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/shazam/mybatis/mapper.xml" afterPath="$PROJECT_DIR$/out/production/shazam/mybatis/mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccessManager/RegisterServlet.java" afterPath="$PROJECT_DIR$/src/AccessManager/RegisterServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DB/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DB/DAO/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MetadataLoader/ImageLoadServlet.java" afterPath="$PROJECT_DIR$/src/MetadataLoader/ImageLoadServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mobile/index.html" afterPath="$PROJECT_DIR$/out/artifacts/shazam_war_exploded/mobile/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AccessManager/LoginServlet.java" afterPath="$PROJECT_DIR$/src/AccessManager/LoginServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java" afterPath="$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java" afterPath="$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mybatis/mapper.xml" afterPath="$PROJECT_DIR$/src/mybatis/mapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/mainview.jsp" afterPath="$PROJECT_DIR$/web/mainview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/mobile/index.html" afterPath="$PROJECT_DIR$/web/mobile/index.html" />
     </list>
     <ignored path="shazam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,70 +45,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mybatis/mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.071428">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-              <folding>
-                <marker date="1452926130328" expanded="true" signature="271:474" placeholder="insert into TABLE... " />
-                <marker date="1452926130328" expanded="true" signature="578:733" placeholder="SELECT TOP 1... " />
-                <marker date="1452926130328" expanded="true" signature="578:754" placeholder="SELECT TOP 1... " />
-                <marker date="1452926130328" expanded="true" signature="858:932" placeholder="SELECT -- [I... " />
-                <marker date="1452926130328" expanded="true" signature="932:933" placeholder="SELECT [Albu... " />
-                <marker date="1452926130328" expanded="true" signature="1040:1126" placeholder="SELECT [Albu... " />
-                <marker date="1452926130328" expanded="true" signature="1040:1160" placeholder="SELECT [Titl... " />
-                <marker date="1452926130328" expanded="true" signature="1283:1635" placeholder="Select C.Tit... " />
-                <marker date="1452926130328" expanded="true" signature="1283:1666" placeholder="Select C.Tit... " />
-                <marker date="1452926130328" expanded="true" signature="1283:1697" placeholder="Select C.Tit... " />
-                <marker date="1452926130328" expanded="true" signature="1403:1635" placeholder="Select C.Tit... " />
-                <marker date="1452926130328" expanded="true" signature="1809:1863" placeholder="SELECT TOP 1... " />
-                <marker date="1452926130328" expanded="true" signature="1809:1890" placeholder="SELECT [User... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/mobile/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.655172">
-              <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5320624">
-              <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mainview.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.224138">
-              <caret line="265" column="56" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+            <state vertical-scroll-proportion="-65.14286">
+              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding>
-                <marker date="1452925730109" expanded="true" signature="10456:10471" placeholder="..." />
-                <marker date="1452925730109" expanded="true" signature="10767:10780" placeholder="..." />
-                <marker date="1452925730109" expanded="true" signature="12650:12671" placeholder="..." />
-                <marker date="1452925730109" expanded="true" signature="12943:12961" placeholder="..." />
+                <marker date="1452934322429" expanded="true" signature="10531:10546" placeholder="..." />
+                <marker date="1452934322429" expanded="true" signature="10842:10855" placeholder="..." />
+                <marker date="1452934322429" expanded="true" signature="12725:12746" placeholder="..." />
+                <marker date="1452934322429" expanded="true" signature="13018:13036" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AccessManager/LoginServlet.java">
+      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AccessManager/RegisterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,6 +75,68 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1984252">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadHistoryServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AccessManager/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DB/DAO/TestDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DB/DAO/ImageDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogoutServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -153,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/mainView.jsp" />
         <option value="$PROJECT_DIR$/web/CSS/css.css" />
         <option value="$PROJECT_DIR$/web/CSS/body.css" />
         <option value="$PROJECT_DIR$/web/CSS/normalize.css" />
@@ -187,23 +200,24 @@
         <option value="$PROJECT_DIR$/src/DB/DAO/ImageDAO.java" />
         <option value="$PROJECT_DIR$/shazam.iml" />
         <option value="$PROJECT_DIR$/src/DB/DTO/searchOffsetDTO.java" />
-        <option value="$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java" />
         <option value="$PROJECT_DIR$/web/test.txt" />
         <option value="$PROJECT_DIR$/web/test.jsp" />
-        <option value="$PROJECT_DIR$/src/AccessManager/LoginServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/AccessManager/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/Config/DateFormatter.java" />
         <option value="$PROJECT_DIR$/src/DB/DTO/HistroyDTO.java" />
         <option value="$PROJECT_DIR$/web/bootstrap-3.3.6/docs/sitemap.xml" />
-        <option value="$PROJECT_DIR$/src/AccessManager/RegisterServlet.java" />
-        <option value="$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java" />
         <option value="$PROJECT_DIR$/src/MetadataLoader/ImageLoadServlet.java" />
-        <option value="$PROJECT_DIR$/web/mainview.jsp" />
         <option value="$PROJECT_DIR$/src/mybatis/mapper.xml" />
         <option value="$PROJECT_DIR$/src/DB/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/web/mobile/index.html" />
+        <option value="$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/DB/DAO/SessionFactorySingleton.java" />
+        <option value="$PROJECT_DIR$/web/mainview.jsp" />
+        <option value="$PROJECT_DIR$/src/AccessManager/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/AccessManager/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java" />
       </list>
     </option>
   </component>
@@ -259,9 +273,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,58 +343,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MetadataLoader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shazam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AccessManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,19 +362,19 @@
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;Database.Settings&#10;settings&#9;ACTION&#9;Database.Settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\WEB-INF\lib" />
-      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\images" />
-      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\images" />
       <recent name="C:\Users\Administrator\IdeaProjects\shazam\web" />
       <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\js" />
       <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\CSS" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\WEB-INF\lib" />
+      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web\images" />
+      <recent name="C:\Users\Administrator\IdeaProjects\shazam\web" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.mainview.jsp">
@@ -1088,7 +1052,9 @@
       <workItem from="1452866718467" duration="7209000" />
       <workItem from="1452886816282" duration="1721000" />
       <workItem from="1452888560800" duration="2000000" />
-      <workItem from="1452922858087" duration="7005000" />
+      <workItem from="1452922858087" duration="10569000" />
+      <workItem from="1452965614846" duration="646000" />
+      <workItem from="1453104452679" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="1st Commit">
       <created>1452889418463</created>
@@ -1096,11 +1062,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452889418463</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="with PL">
+      <created>1452931325863</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1452931325863</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319038000" />
+    <option name="totallyTimeSpent" value="323842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1120,14 +1092,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31744313" sideWeight="0.49307036" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27571115" sideWeight="0.15741935" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.48027718" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27352297" sideWeight="0.17677419" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3169399" sideWeight="0.47032258" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27571115" sideWeight="0.8425806" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27352297" sideWeight="0.8232258" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.49573562" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29225805" sideWeight="0.43288085" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29096773" sideWeight="0.43288085" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1991744" sideWeight="0.5671192" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3880597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24863014" sideWeight="0.4940476" order="1" side_tool="false" content_ui="tabs" />
@@ -1141,7 +1113,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.4948387" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1157,7 +1129,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st Commit" />
+    <MESSAGE value="with PL" />
+    <option name="LAST_COMMIT_MESSAGE" value="with PL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1169,7 +1142,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>127</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
@@ -1181,19 +1154,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>182</line>
+          <line>181</line>
           <properties />
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>154</line>
+          <line>153</line>
           <properties />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>258</line>
+          <line>257</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -1205,7 +1178,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>202</line>
+          <line>201</line>
           <properties />
           <option name="timeStamp" value="111" />
         </line-breakpoint>
@@ -1217,7 +1190,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/mainview.jsp</url>
-          <line>185</line>
+          <line>184</line>
           <properties />
           <option name="timeStamp" value="113" />
         </line-breakpoint>
@@ -1234,10 +1207,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/bootstrap-3.3.6/dist/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38321167">
-          <caret line="4" column="5837" selection-start-line="4" selection-start-column="5833" selection-end-line="4" selection-end-column="5837" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1262,13 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3921875">
           <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/shazam/AccessManager/LoginServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26950353">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1342,20 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DAO/TestDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DTO/testDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DB/DTO/ImageDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1381,13 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34796748">
           <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DAO/ImageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4976672">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1419,13 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6508972">
-          <caret line="32" column="76" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DB/DTO/UserInfoDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47278383">
@@ -1444,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3843594">
           <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,7 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="190" selection-start-line="1" selection-start-column="190" selection-end-line="1" selection-end-column="190" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1492,7 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1518,10 +1454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="609" column="13" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="16" />
-          <folding>
-            <element signature="e#24298#24299#0" expanded="false" />
-            <element signature="e#24363#24364#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1529,39 +1461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetadataLoader/ImageLoadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccessManager/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48025277">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24012639">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1569,20 +1468,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.071428">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DTO/testDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MetadataLoader/ImageLoadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="38" selection-start-line="28" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <marker date="1452926130328" expanded="true" signature="271:474" placeholder="insert into TABLE... " />
-            <marker date="1452926130328" expanded="true" signature="578:733" placeholder="SELECT TOP 1... " />
-            <marker date="1452926130328" expanded="true" signature="578:754" placeholder="SELECT TOP 1... " />
-            <marker date="1452926130328" expanded="true" signature="858:932" placeholder="SELECT -- [I... " />
-            <marker date="1452926130328" expanded="true" signature="932:933" placeholder="SELECT [Albu... " />
-            <marker date="1452926130328" expanded="true" signature="1040:1126" placeholder="SELECT [Albu... " />
-            <marker date="1452926130328" expanded="true" signature="1040:1160" placeholder="SELECT [Titl... " />
-            <marker date="1452926130328" expanded="true" signature="1283:1635" placeholder="Select C.Tit... " />
-            <marker date="1452926130328" expanded="true" signature="1283:1666" placeholder="Select C.Tit... " />
-            <marker date="1452926130328" expanded="true" signature="1283:1697" placeholder="Select C.Tit... " />
-            <marker date="1452926130328" expanded="true" signature="1403:1635" placeholder="Select C.Tit... " />
-            <marker date="1452926130328" expanded="true" signature="1809:1863" placeholder="SELECT TOP 1... " />
-            <marker date="1452926130328" expanded="true" signature="1809:1890" placeholder="SELECT [User... " />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.896551">
+          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="190" column="12" selection-start-line="190" selection-start-column="12" selection-end-line="190" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccessManager/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DAO/TestDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DAO/ImageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-65.14286">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding>
+            <marker date="1452934322429" expanded="true" signature="10531:10546" placeholder="..." />
+            <marker date="1452934322429" expanded="true" signature="10842:10855" placeholder="..." />
+            <marker date="1452934322429" expanded="true" signature="12725:12746" placeholder="..." />
+            <marker date="1452934322429" expanded="true" signature="13018:13036" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1598,36 +1555,39 @@
     <entry file="file://$PROJECT_DIR$/src/AccessManager/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/mainview.jsp">
+    <entry file="file://$PROJECT_DIR$/src/AccessManager/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.224138">
-          <caret line="265" column="56" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
-          <folding>
-            <marker date="1452925730109" expanded="true" signature="10456:10471" placeholder="..." />
-            <marker date="1452925730109" expanded="true" signature="10767:10780" placeholder="..." />
-            <marker date="1452925730109" expanded="true" signature="12650:12671" placeholder="..." />
-            <marker date="1452925730109" expanded="true" signature="12943:12961" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.655172">
-          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/MetadataLoader/LoadHistoryServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5320624">
-          <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info/exclude">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17952757">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DB/DAO/HistoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1984252">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding />
         </state>
       </provider>

@@ -183,20 +183,17 @@
       data:{id: $("#inputEmail").val(), pw:encpw.toString(CryptoJS.enc.Hex)},
       type:'post',
       async:false,
-//      beforeSend:function(){
-//      },
       success: function(data){},
       complete: function(){},
       error: function(a,v,c){}
     }).responseText;
     res=JSON.parse(res);
-//    alert(typeof $("#inputPassword").value);
-
-    if(res.login =='ok') {
+    console.log(res);
+    if(res.status =='ok') {
       return true;
     }
     else {
-      alert(res.login);
+      alert(res.status);
 
       return false;
     }

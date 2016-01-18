@@ -17,9 +17,9 @@ import java.util.List;
  * Created by ParkBeomChan-PC-W1 on 2016-01-04.
  */
 public class HistoryDAO {
-    SqlSessionFactory sessionfactory=null;
-    SqlSession session = null;
-    InputStream inputStream = null;
+   private SqlSessionFactory sessionfactory=null;
+   private SqlSession session = null;
+   private InputStream  inputStream = null;
 
     public HistoryDAO(){
 
@@ -30,6 +30,9 @@ public class HistoryDAO {
         List<HistroyDTO> list=null;
 
         getSession();
+
+        SqlSession session=sessionfactory.openSession(false);
+
         list=session.selectList("searchHistory",new searchOffsetDTO(id,limit,offset));
         closeSession();
         return list;
@@ -43,7 +46,7 @@ public class HistoryDAO {
                 e.printStackTrace();
             }
             sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
-            session=sessionfactory.openSession(false);
+           SqlSession session=sessionfactory.openSession(false);
         }
         return session;
     }
@@ -53,6 +56,8 @@ public class HistoryDAO {
         if(inputStream!=null) {
             try {
                 inputStream.close();
+                inputStream=null;
+                session=null;
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -34,7 +34,7 @@ public class LoadHistoryServlet extends HttpServlet {
             array.add(dto);
         }
         object.put("result",array);
-        System.out.println(object);
+//        System.out.println(object);
         response.getWriter().write(object.toJSONString());
     }
 

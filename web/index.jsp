@@ -188,12 +188,12 @@
       error: function(a,v,c){}
     }).responseText;
     res=JSON.parse(res);
-
-    if(res.login =='ok') {
+    console.log(res);
+    if(res.status =='ok') {
       return true;
     }
     else {
-      alert(res.login);
+      alert(res.status);
 
       return false;
     }

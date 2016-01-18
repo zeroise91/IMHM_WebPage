@@ -97,12 +97,12 @@
 
                                     <div class="form-group">
                                         <label for="reg_password" class="sr-only">Password</label>
-                                        <input type="password" class="form-control" id="reg_password" name="pw" placeholder="password" maxlength="128" minlength="8"required >
+                                        <input type="password" class="form-control" id="reg_password" name="pw" placeholder="password" maxlength="128" minlength="4"required >
                                     </div>
 
                                     <div class="form-group">
                                         <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                                        <input type="password" class="form-control" id="reg_password_confirm" name="confirm_pw" placeholder="confirm password" maxlength="128"  minlength="8"required>
+                                        <input type="password" class="form-control" id="reg_password_confirm" name="confirm_pw" placeholder="confirm password" maxlength="128"  minlength="4"required>
                                     </div>
 
                                     <div class="form-group">
@@ -133,24 +133,32 @@
     $("#reg_form").validate({
         submitHandler: function () {
             var x=CryptoJS.SHA256($("#reg_password").val());
-
+            var id=  $("#reg_email").val();
             var res=$.ajax({
                 url:'/register',
-                data:{id: $("#reg_email").val(),pw:x.toString(CryptoJS.enc.Hex),nick:$("#nick-name").val()},
+                data:{id: id,pw:x.toString(CryptoJS.enc.Hex),nick:$("#nick-name").val()},
                 type:'post',
                 async:false,
                 beforeSend: function(){$("#_test").text("Registering");}
             }).responseText;
             res=JSON.parse(res);
-            alert(JSON.stringify(res));
+//            alert(JSON.stringify(res));
             if(res.status=='accepted'){
-                        window.IMHMAndroidApp.isSuccess(true);
+                window.IMHMAndroidApp.isSuccess(true,id);
+                $("#result_alert").addClass('alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
 
                 $("#_test").text("Registered");
                 $("#reg_button").addClass("btn-success");
                 $("#reg_button").attr("disabled",true);
             }
             else{
+                if(res.status=='IdExists')
+                    $("#result_alert").addClass('alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
+                if(res.status=='error')
+                    $("#result_alert").addClass('alert-danger').text("DB ERROR").css('display','inherit');
+
+                window.IMHMAndroidApp.isSuccess(false,null);
+
                 $("#_test").text("try again");
 
             }
@@ -176,12 +184,12 @@
             },
             pw: {
                 required:'반드시 입력해주세요',
-                minlength:'8자 이상 입력해주세요'
+                minlength:'4자 이상 입력해주세요'
             },
             confirm_pw: {
                 required: '반드시 입력해주세요',
                 equalTo: '비밀번호가 다릅니다',
-                minlength:'8자 이상 입력해주세요'
+                minlength:'4자 이상 입력해주세요'
             },
             nick: {required:'별명을 설정해주세요'}
 

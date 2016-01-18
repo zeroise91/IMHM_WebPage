@@ -36,16 +36,16 @@ public class LoginServlet extends HttpServlet {
         try{
             List<UserDTO> reslist = dao.checkLogin(id,pw);
             if(reslist.size()==1) {
-                obj.put("login", "ok");
+                obj.put("status", "ok");
                 obj.put("id",id);
                 request.getSession().setAttribute("id",id);
                 request.getSession().setAttribute("nick",reslist.get(0).getNick());
             }
             else{
-                obj.put("login","no");
+                obj.put("status","no");
             }
         }catch (Exception e){
-            obj.put("login","no");
+            obj.put("status","no");
             e.printStackTrace();
         }finally {
             response.getWriter().write(obj.toJSONString());
