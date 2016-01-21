@@ -27,6 +27,7 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
         String id = request.getParameter("id");
         String pw = (request.getParameter("pw"));
         JSONObject obj = new JSONObject();
@@ -38,6 +39,7 @@ public class LoginServlet extends HttpServlet {
             if(reslist.size()==1) {
                 obj.put("status", "ok");
                 obj.put("id",id);
+                obj.put("nick",reslist.get(0).getNick());
                 request.getSession().setAttribute("id",id);
                 request.getSession().setAttribute("nick",reslist.get(0).getNick());
             }

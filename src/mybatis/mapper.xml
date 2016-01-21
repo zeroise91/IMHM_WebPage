@@ -42,14 +42,24 @@ SELECT TOP 10 [Id]
     </select>
 
     <select id="searchHistory" parameterType="DB.DTO.searchOffsetDTO" resultType="DB.DTO.HistroyDTO" >
-    Select   C.Title, C.AlbumName,C.Artist,B.SearchDate,B.Location.Long as Latitude, B.Location.Lat as Longtitude, B.MusicId
+    Select   C.Title, C.AlbumName,C.Artist,B.SearchDate,B.Location.Long as Longtitude, B.Location.Lat as Latitude, B.MusicId
      From
      [IHMHdb].[dbo].[User] as A Inner JOIN [IHMHdb].[dbo].[SearchHistory] as B on A.[Id] = B.[UserId]
      Inner Join [IHMHdb].[dbo].[Music] as C on B.MusicId = C.Id
 
      Where A.Username=#{id} order by B.SearchDate desc
-        	OFFSET #{limit} ROWS
-	FETCH NEXT #{offset} ROWS ONLY;
+        	OFFSET #{offset} ROWS
+	FETCH NEXT #{limit} ROWS ONLY;
+    </select>
+
+
+    <select id="searchmobileHistory" parameterType="java.lang.String" resultType="DB.DTO.mobileHistoryDTO" >
+        Select  C.Title, C.AlbumName,C.Artist,B.SearchDate,B.Location.Long as Longtitude, B.Location.Lat as Latitude, B.MusicId
+        From
+        [IHMHdb].[dbo].[User] as A Inner JOIN [IHMHdb].[dbo].[SearchHistory] as B on A.[Id] = B.[UserId]
+        Inner Join [IHMHdb].[dbo].[Music] as C on B.MusicId = C.Id
+
+        Where A.Username=#{id} order by B.SearchDate desc
     </select>
 
     <select id="getIdList" parameterType="java.lang.String" resultType="java.lang.String">
@@ -58,4 +68,20 @@ SELECT TOP 10 [Id]
     FROM [IHMHdb].[dbo].[User]
     where [Username]=#{id}
     </select>
+
+    <insert id="uploadHistory" parameterType="DB.DTO.UploadHistoryDTO">
+
+    INSERT INTO [IHMHdb].[dbo].[SearchHistory]
+               ([UserId]
+               ,[MusicId]
+               ,[Location]
+               ,[SearchDate])
+         VALUES
+               (
+               (select top 1 [IHMHdb].[dbo].[User].[Id] from [IHMHdb].[dbo].[User] where [IHMHdb].[dbo].[User].[Username]=#{id})
+               ,#{musicIdx}
+               ,geography::STGeomFromText('POINT('+ cast(#{latitude} as varchar(20))+' '+ cast(#{longitude} as varchar(20))+')', 4326)
+               ,SYSDATETIME())
+
+    </insert>
 </mapper>

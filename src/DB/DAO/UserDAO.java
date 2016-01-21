@@ -69,6 +69,9 @@ public class UserDAO {
             if(x==1){
                 session.commit();
             }
+            else{
+                session.rollback();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

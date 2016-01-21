@@ -152,7 +152,7 @@
             <script  src="http://maps.google.com/maps/api/js" ></script>
 
             <script>
-                var limit= 0,offset= 5;
+                var limit= 5,offset= 0;
 
                 var    map = new google.maps.Map($("#map")[0], {
                     center: {lat: 37.574515, lng: 126.976930},
@@ -168,13 +168,39 @@
                 function geocodeLatLng(geocoder, lat, lng, obj,titleinfo, next){
                     var latlng = {lat: lat, lng: lng};
                     geocoder.geocode({'location': latlng}, function (results,status) {
-                        if (status === google.maps.GeocoderStatus.OK) {
-                            if (results[1]) {
+                        switch (status){
+                            case google.maps.GeocoderStatus.OK:
+                            {
+                                if (results[1]) {
+                                    var marker = new google.maps.Marker({position: latlng, map: map ,icon:marker_icon});
+
+                                    // 윈도우는 하나만 보게 하자
+                                    marker.info = new google.maps.InfoWindow({
+                                        content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
+                                    });
+
+                                    infowindowarr.push(marker.info);
+                                    bounds.extend(marker.position);
+
+
+                                    google.maps.event.addListener(marker, 'click', function() {
+                                        for(var idx=0;idx<infowindowarr.length;idx++){
+                                            infowindowarr[idx].close();
+                                        }
+
+                                        marker.info.open(map, marker);
+
+                                    });
+                                    $(obj).text (results[1].formatted_address);
+                                }
+
+                            }
+                                break;
+                            case google.maps.GeocoderStatus.ZERO_RESULTS	:{
                                 var marker = new google.maps.Marker({position: latlng, map: map ,icon:marker_icon});
 
-                                // 윈도우는 하나만 보게 하자
                                 marker.info = new google.maps.InfoWindow({
-                                    content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
+                                    content: '<div><h5>장소: '+ '찾을 수 없는 장소'+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
                                 });
 
                                 infowindowarr.push(marker.info);
@@ -189,15 +215,52 @@
                                     marker.info.open(map, marker);
 
                                 });
-                                $(obj).text (results[1].formatted_address);
+                                $(obj).text ('찾을 수 없는 장소');
                             }
-
-                        }
-                        else{
+                                break;
+                            case google.maps.GeocoderStatus.OVER_QUERY_LIMIT:
+                            {
                                 nextAddress--;
                                 delay++;
-
+                            }
+                                break;
                         }
+//
+//                        if (status === google.maps.GeocoderStatus.OK) {
+//                            if (results[1]) {
+//                                var marker = new google.maps.Marker({position: latlng, map: map ,icon:marker_icon});
+//
+//                                // 윈도우는 하나만 보게 하자
+//                                marker.info = new google.maps.InfoWindow({
+//                                    content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
+//                                });
+//
+//                                infowindowarr.push(marker.info);
+//                                bounds.extend(marker.position);
+//
+//
+//                                google.maps.event.addListener(marker, 'click', function() {
+//                                    for(var idx=0;idx<infowindowarr.length;idx++){
+//                                        infowindowarr[idx].close();
+//                                    }
+//
+//                                    marker.info.open(map, marker);
+//
+//                                });
+//                                $(obj).text (results[1].formatted_address);
+//                            }
+//
+//                        }
+//                        else if(status ==google.maps.GeocoderStatus.ZERO_RESULTS){
+//
+//                        }
+//                        else
+//                            {
+//                                nextAddress--;
+//                                delay++;
+//                            }
+
+
 
                         console.log("next 진입");
                         next();
@@ -205,29 +268,30 @@
                     );
                 }
 
-                 function  addmarkers(lat, lng) {
+//                 function  addmarkers(lat, lng) {
 //                    alert(lat+' '+lng);
-                    var marker = new google.maps.Marker(
-                            {
-                                position: {lat: lat , lng: lng},
-                                map: map,
-                                icon: marker_icon
-                            }
-                    );
-
-                     marker.info = new google.maps.InfoWindow({
-                         content: 'test'
-                     });
-
-                     google.maps.event.addListener(marker, 'click', function() {
-                         marker.info.open(map, marker);});
-                };
+//                    var marker = new google.maps.Marker(
+//                            {
+//                                position: {lat: lat , lng: lng},
+//                                map: map,
+//                                icon: marker_icon
+//                            }
+//                    );
+//
+//                     marker.info = new google.maps.InfoWindow({
+//                         content: 'test'
+//                     });
+//
+//                     google.maps.event.addListener(marker, 'click', function() {
+//                         marker.info.open(map, marker);});
+//                };
                 var nextAddress = 0;
                 var delay=100;
                 var latitudearr =[];
                 var longtitudearr =[];
                 var size=0;
                 function draw(){
+                    $('#more_button').prop('disabled',true);
 
                     $.ajax({
 
@@ -257,7 +321,7 @@
                                                 "<table class='table' style='border: none;'>"+
                                                 "<tbody><tr>"+
                                                 "<th class='row '>Title</th>"+
-                                                "<td id='title"+(limit+iter)+"'>"+data.result[iter].title+"</td>"+
+                                                "<td id='title"+(offset+iter)+"'>"+data.result[iter].title+"</td>"+
                                                 "</tr>"+
                                                 "<tr>"+
                                                 "<th class='row'>Artist</th>"+
@@ -273,7 +337,7 @@
                                                 "</tr>"+
                                                 "<tr>"+
                                                 "<th class='row'>Location</th>"+
-                                                "<td id='location"+(limit+iter)+"'>"+data.result[iter].Longtitude+" "+data.result[iter].Latitude+"</td>"+
+                                                "<td id='location"+(offset+iter)+"'>"+data.result[iter].Longtitude+" "+data.result[iter].Latitude+"</td>"+
                                                 "</tr>"+
                                                 "</tbody>"+
                                                 "</table>"+
@@ -288,8 +352,8 @@
                                     }
                                     $("#historyContainer").children().last().after( $("#more_button"));
                                     size=data.arraysize;
-                                    limit+=size;
-                                    console.log("size: "+size+",limit: "+limit);
+                                    offset+=size;
+                                    console.log("size: "+size+",offset: "+offset);
                                     theNext();
                                 }
                     }
@@ -299,14 +363,15 @@
 
                 function theNext() {
                     if (nextAddress < size) {
-                        setTimeout('geocodeLatLng(geocoder,'+longtitudearr[nextAddress]+','+latitudearr[nextAddress]+',$("#location'+(nextAddress+limit-size)+'")'+',$("#title'+(nextAddress+limit-size)+'")'+',theNext)', delay);
-                        console.log(nextAddress+" location:#location"+(nextAddress+limit-size));
+                        setTimeout('geocodeLatLng(geocoder,'+latitudearr[nextAddress]+','+longtitudearr[nextAddress]+',$("#location'+(nextAddress+offset-size)+'")'+',$("#title'+(nextAddress+offset-size)+'")'+',theNext)', delay);
+                        console.log(nextAddress+" location:#location"+(nextAddress+offset-size));
                         nextAddress++;
                     } else {
                         // We're done. Show map bounds
                         map.fitBounds(bounds);
                         nextAddress=0;
                         delay=100;
+                        $('#more_button').prop('disabled',false);
                     }
                 }
    </script>
