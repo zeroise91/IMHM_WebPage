@@ -18,8 +18,8 @@ import java.util.List;
 /**
  * Created by ParkBeomChan-PC-W1 on 2016-01-19.
  */
-@WebServlet(name = "mobileLoadHistory", urlPatterns = "/mobile/loadhistory")
-public class mobileLoadHistory extends HttpServlet {
+@WebServlet(name = "mobileLoadHistoryServlet", urlPatterns = "/mobile/loadhistory")
+public class mobileLoadHistoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
 

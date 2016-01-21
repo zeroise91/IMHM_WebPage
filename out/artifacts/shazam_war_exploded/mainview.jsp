@@ -50,18 +50,8 @@
                     height:100%;
                 }
                 body {
-                    height: 100%;
-                    background-image:url("images/tizen.jpg");
-
-                    background-repeat:no-repeat;
-
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size:cover;
-
-                    background-position: center;
-                    background-attachment: fixed;
+                    /*height: 100%;*/
+                    background-color: rgba(80,80,80,0.2);
                 }
                 #contents{
                     height: 100%;
@@ -74,11 +64,21 @@
                     width:100%
                 }
 
-                #navbar_above{
-                    background-color: transparent;
+                .navbar-default {
+                    background-color: #3F51B5;
+                    border-color: #3F51B5;
                 }
+
                 .table>tbody>tr>th , .table>tbody>tr>td{
                    border-top: none 1px;
+                }
+                .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+                    background-color: #303F9F;
+                }
+
+                .drop-shadow {
+                    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+
                 }
             </style>
         </head>
@@ -103,7 +103,7 @@
                             <li><a href="#more_button" style="color:white">More</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.jsp" onclick="logout">Log out <span class="sr-only">(current)</span></a></li>
+                            <li class="active"><a href="index.jsp" onclick="logout" style="color:whitesmoke">Log out <span class="sr-only">(current)</span></a></li>
 
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -117,7 +117,7 @@
                     <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" style=" padding-left: 0px; padding-right: 0px;">
                         <div class="container-map" style="padding-bottom: 20px">
 
-                            <div id="map"></div>
+                            <div class='drop-shadow' id="map" ></div>
                         </div>
                         <style>
                             img .align_center{
@@ -262,7 +262,7 @@
 
 
 
-                        console.log("next 진입");
+//                        console.log("next 진입");
                         next();
                     }
                     );
@@ -311,7 +311,7 @@
 
                                         var div1=document.getElementById('historyContainer');//get the div element
                                         var div2=document.createElement("div");//create a new div
-                                        div2.innerHTML="<div class='thumbnail'>"+
+                                        div2.innerHTML="<div class='thumbnail drop-shadow'>"+
                                         "<div class='row' >"+
                                                 "<div class='col-md-4'>"+
                                                 "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
@@ -337,7 +337,8 @@
                                                 "</tr>"+
                                                 "<tr>"+
                                                 "<th class='row'>Location</th>"+
-                                                "<td id='location"+(offset+iter)+"'>"+data.result[iter].Longtitude+" "+data.result[iter].Latitude+"</td>"+
+                                      //          "<td id='location"+(offset+iter)+"'>"+data.result[iter].Longtitude+" "+data.result[iter].Latitude+"</td>"+
+                                                "<td id='location"+(offset+iter)+"'>"+'변환중'+"</td>"+
                                                 "</tr>"+
                                                 "</tbody>"+
                                                 "</table>"+

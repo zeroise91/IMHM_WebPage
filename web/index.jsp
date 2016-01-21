@@ -73,10 +73,10 @@
 
 </head>
 
-<body style=" min-height : 100%">
+<body>
 
 
-  <div class="container-fluid" style="background-color: transparent;" >
+  <div class="container" style="background-color: transparent;" >
 
       <div class="row">
         <div class="row" style="height: 20%;" role="banner">

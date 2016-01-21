@@ -84,4 +84,14 @@ SELECT TOP 10 [Id]
                ,SYSDATETIME())
 
     </insert>
+
+    <select id="searchMusicByIdx" parameterType="java.lang.Integer" resultType="DB.DTO.MusicDTO">
+
+        SELECT TOP 1
+           [Title]
+         ,[Artist]
+         ,[AlbumName]
+        FROM [IHMHdb].[dbo].[Music]
+        WHERE [Id] =#{musicidx}
+    </select>
 </mapper>

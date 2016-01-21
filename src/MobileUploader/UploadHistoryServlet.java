@@ -16,6 +16,9 @@ import java.io.IOException;
 @WebServlet(name = "UploadHistoryServlet" ,urlPatterns = "/mobile/uploadhistory")
 public class UploadHistoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        System.out.println("fuck");
         HistoryDAO dao= new HistoryDAO();
         String id =request.getParameter("id");
         Double longitude= Double.parseDouble(request.getParameter("longitude"));
@@ -30,7 +33,7 @@ public class UploadHistoryServlet extends HttpServlet {
                 obj.put("upload","accepted");
 
             }else {
-                obj.put("upload","db error");
+                obj.put("upload","failed");
 
             }
         }catch (Exception e){

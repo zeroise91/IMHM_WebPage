@@ -50,13 +50,9 @@ public class HistoryDAO {
         SqlSession session=sessionfactory.openSession(false);
 
         int res=  session.insert("uploadHistory", new UploadHistoryDTO(id, longitude, latitude, musicIdx));
-
-        if(res==1){
-            session.commit();
-        }else{
-            session.rollback();
-        }
-        res= res==1 ? res : 0;
+        if (res==1)session.commit();
+        else session.rollback();
+        System.out.println(res);
         closeSession();
         return res;
     }
