@@ -57,6 +57,7 @@
       background-size:cover;
 
       background-position: center;
+      background-attachment: fixed;
 
     }
 
@@ -83,7 +84,7 @@
           <h1>IMHM</h1>
         </div>
 
-        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1 background_image">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 background_image">
 
           <div class="row" >
             <form class ="form-signin cmxform" action="/mainview.jsp" method="post" id="loginform">
@@ -116,7 +117,7 @@
       <form class="cmxform" method="post" id="reg_form">
 
       <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel"> Register </h4>
+        <h4 class="modal-title" id="myModalLabel" style="color: #f7f7f7"> Register </h4>
       </div>
       <div class="modal-body">
         <div id="result_alert"  class="alert"style="display: none;"></div>
@@ -151,7 +152,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" onclick='resetModal()'>close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" >close</button>
         <button type="submit" class="btn btn-primary "  name="reg_email_button" id="reg_button"  ><span id="_test">Resister</span></button>
 
       </div>
@@ -166,7 +167,8 @@
      $('#reg_form').each(function(){
        this.reset();
      });
-     $('#result_alert').removeClass().addClass('alert').css('display','none');
+     $('#result_alert').removeClass('alert-success alert-danger').css('display','none');
+     $("#reg_button").removeClass().addClass('btn btn-primary').prop('disabled',false);
      $("#_test").text("Register");
 
    });
@@ -216,17 +218,17 @@
       }).responseText;
       res=JSON.parse(res);
      if(res.status=='accepted'){
-       $("#result_alert").addClass('alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
+       $("#result_alert").removeClass().addClass('alert alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
 
        $("#_test").text("Registered");
        $("#reg_button").addClass("btn-success");
-       $("#reg_button").attr("disabled",true);
+       $("#reg_button").prop("disabled",true);
        }
       else{
        if(res.status=='IdExists')
-        $("#result_alert").addClass('alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
+        $("#result_alert").removeClass().addClass('alert alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
        if(res.status=='error')
-        $("#result_alert").addClass('alert-danger').text("DB ERROR").css('display','inherit');
+        $("#result_alert").removeClass().addClass('alert alert-danger').text("DB ERROR").css('display','inherit');
 
        $("#_test").text("try again");
 

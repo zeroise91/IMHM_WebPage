@@ -9,8 +9,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-
-
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
     response.setHeader("Pragma","no-cache");
 
@@ -125,10 +123,12 @@
                             }
                         </style>
                         <div id="historyContainer">
-                             <button class="btn btn-default btn-block" id="more_button" onclick="draw()"><span>more</span></button>
+                             <button class="btn btn-default btn-block drop-shadow" id="more_button" onclick="draw()"><span>more</span></button>
 
                         </div>
                         <!--history end -->
+                        <div style="height: 10em"></div>
+
                     </div>
 
 
@@ -225,66 +225,10 @@
                             }
                                 break;
                         }
-//
-//                        if (status === google.maps.GeocoderStatus.OK) {
-//                            if (results[1]) {
-//                                var marker = new google.maps.Marker({position: latlng, map: map ,icon:marker_icon});
-//
-//                                // 윈도우는 하나만 보게 하자
-//                                marker.info = new google.maps.InfoWindow({
-//                                    content: '<div><h5>장소: '+results[1].formatted_address+'</h5><h5>제목: '+$(titleinfo).text()+'</h5></div>'
-//                                });
-//
-//                                infowindowarr.push(marker.info);
-//                                bounds.extend(marker.position);
-//
-//
-//                                google.maps.event.addListener(marker, 'click', function() {
-//                                    for(var idx=0;idx<infowindowarr.length;idx++){
-//                                        infowindowarr[idx].close();
-//                                    }
-//
-//                                    marker.info.open(map, marker);
-//
-//                                });
-//                                $(obj).text (results[1].formatted_address);
-//                            }
-//
-//                        }
-//                        else if(status ==google.maps.GeocoderStatus.ZERO_RESULTS){
-//
-//                        }
-//                        else
-//                            {
-//                                nextAddress--;
-//                                delay++;
-//                            }
-
-
-
-//                        console.log("next 진입");
                         next();
                     }
                     );
                 }
-
-//                 function  addmarkers(lat, lng) {
-//                    alert(lat+' '+lng);
-//                    var marker = new google.maps.Marker(
-//                            {
-//                                position: {lat: lat , lng: lng},
-//                                map: map,
-//                                icon: marker_icon
-//                            }
-//                    );
-//
-//                     marker.info = new google.maps.InfoWindow({
-//                         content: 'test'
-//                     });
-//
-//                     google.maps.event.addListener(marker, 'click', function() {
-//                         marker.info.open(map, marker);});
-//                };
                 var nextAddress = 0;
                 var delay=100;
                 var latitudearr =[];
@@ -385,8 +329,12 @@
                 var LogOutTimer = function() {
                     var S = {
                         timer : null,
-                        limit : 1000 * 60 * 5,
-                        fnc   : function() {},
+                        limit : <%=session.getMaxInactiveInterval()*1000%>,
+                        fnc   : function() {
+                            alert("자동 로그아웃 되었습니다.");
+                            window.location='./logout';
+
+                        },
                         start : function() {
                             S.timer = window.setTimeout(S.fnc, S.limit);
                         },
@@ -399,18 +347,6 @@
                     return S;
 
                 }();
-
-
-
-                // 로그아웃 체크시간 설정
-                LogOutTimer.limit = <%=session.getMaxInactiveInterval()*1000%>;
-                // 로그아웃 함수 설정
-
-                LogOutTimer.fnc = function() {
-                    alert("자동 로그아웃 되었습니다.");
-                    window.location='./logout';
-
-                }
 
                 function logout(){
                     window.location='./logout';
@@ -428,7 +364,6 @@
     </html>
 <%
     }//end main block
-    //지랄말라 전해라
     else{
         %>
             <!DOCTYPE html>

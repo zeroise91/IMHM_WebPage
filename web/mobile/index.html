@@ -80,10 +80,10 @@
         <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1 background_image">
 
             <div class="row" >
-                <form class="cmxform" method="post" id="reg_form">
+                <form class="cmxform" method="post" id="reg_form" action='index.html'>
 
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel"> Register </h4>
+                        <h4 class="modal-title" id="myModalLabel" style=" color : #f7f7f7"> Register </h4>
                     </div>
                     <div class="modal-body">
                         <div id="result_alert"  class="alert"style="display: none;"></div>
@@ -133,33 +133,33 @@
     $("#reg_form").validate({
         submitHandler: function () {
             var x=CryptoJS.SHA256($("#reg_password").val());
-            var id=  $("#reg_email").val();
+
             var res=$.ajax({
                 url:'/register',
-                data:{id: id,pw:x.toString(CryptoJS.enc.Hex),nick:$("#nick-name").val()},
+                data:{id: $("#reg_email").val(),pw:x.toString(CryptoJS.enc.Hex),nick:$("#nick-name").val()},
                 type:'post',
                 async:false,
                 beforeSend: function(){$("#_test").text("Registering");}
             }).responseText;
             res=JSON.parse(res);
-//            alert(JSON.stringify(res));
             if(res.status=='accepted'){
-                window.IMHMAndroidApp.isSuccess(true,id);
-                $("#result_alert").addClass('alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
+                $("#result_alert").removeClass().addClass('alert alert-success').text("등록에 성공하셨습니다.").css('display','inherit');
 
                 $("#_test").text("Registered");
                 $("#reg_button").addClass("btn-success");
-                $("#reg_button").attr("disabled",true);
+                $("#reg_button").prop("disabled",true);
+                window.IMHMAndroidApp.isSuccess(true,id);
+
             }
             else{
                 if(res.status=='IdExists')
-                    $("#result_alert").addClass('alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
+                    $("#result_alert").removeClass().addClass('alert alert-danger').text("이미 존재하는 아이디입니다.").css('display','inherit');
                 if(res.status=='error')
-                    $("#result_alert").addClass('alert-danger').text("DB ERROR").css('display','inherit');
-
-                window.IMHMAndroidApp.isSuccess(false,null);
+                    $("#result_alert").removeClass().addClass('alert alert-danger').text("DB ERROR").css('display','inherit');
 
                 $("#_test").text("try again");
+
+                window.IMHMAndroidApp.isSuccess(false,null);
 
             }
             return false;
@@ -177,6 +177,7 @@
             },
             nick: {required:true}
         },
+
         messages:{
             id: {
                 required: "반드시 입력해주세요",
