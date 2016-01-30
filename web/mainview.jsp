@@ -11,7 +11,7 @@
 <%
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
     response.setHeader("Pragma","no-cache");
-
+    System.out.println("SessionID: "+request.getSession().getId());
     String idparam=request.getParameter("id");
 
     String id=(String)request.getSession().getAttribute("id");
@@ -29,7 +29,7 @@
             <meta name="description" content="FirstView">
             <meta name="author" content="scssm">
 
-            <title><%=nick%>'s shazam</title>
+            <title><%=nick%>'s IMHM</title>
 
             <!-- Bootstrap core CSS -->
             <link href="bootstrap-3.3.6/dist/css/bootstrap.css" rel="stylesheet">
@@ -101,7 +101,7 @@
                             <li><a href="#more_button" style="color:white">More</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="index.jsp" onclick="logout" style="color:whitesmoke">Log out <span class="sr-only">(current)</span></a></li>
+                            <li class="active"><a href="/logout"  style="color:whitesmoke">Log out <span class="sr-only">(current)</span></a></li>
 
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -332,8 +332,7 @@
                         limit : <%=session.getMaxInactiveInterval()*1000%>,
                         fnc   : function() {
                             alert("자동 로그아웃 되었습니다.");
-                            window.location='./logout';
-
+                            logout();
                         },
                         start : function() {
                             S.timer = window.setTimeout(S.fnc, S.limit);
@@ -349,8 +348,8 @@
                 }();
 
                 function logout(){
-                    window.location='./logout';
 
+                    location.href='/logout';
                 }
 
                 // 로그아웃 타이머 실행
@@ -365,6 +364,7 @@
 <%
     }//end main block
     else{
+        response.sendRedirect("index.jsp");
         %>
             <!DOCTYPE html>
             <html>

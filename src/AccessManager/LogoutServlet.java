@@ -13,13 +13,21 @@ import java.io.IOException;
 @WebServlet(name = "LogoutServlet",urlPatterns = "/logout")
 public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("SessionID: "+request.getSession().getId());
+
         request.getSession().invalidate();
+        System.out.println("SessionID: "+request.getSession().getId());
+
         response.sendRedirect("index.jsp");
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("SessionID: "+request.getSession().getId()+" remove");
+
         request.getSession().invalidate();
+        System.out.println("SessionID: "+request.getSession().getId()+" created");
+
         response.sendRedirect("index.jsp");
     }
 }
