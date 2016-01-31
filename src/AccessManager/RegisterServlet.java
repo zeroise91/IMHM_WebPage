@@ -31,10 +31,11 @@ public class RegisterServlet extends HttpServlet {
 
         UserDAO dao=new UserDAO();
         try {
-            if(dao.canInsertId(id)==false){
-                obj.put("status", "IdExists");
-
-            }
+//            if(dao.canInsertId(id)==false){
+//                obj.put("status", "IdExists");
+//
+//            }
+            if(false){}
             else{
                 int res= dao.registerUser(new UserDTO(id,pw,nick));
 

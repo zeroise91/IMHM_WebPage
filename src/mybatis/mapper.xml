@@ -1,97 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis/mapper.xml">
 
+    <!--converted to mysql-->
     <insert id="register" parameterType="DB.DTO.UserDTO">
-        insert into  [dbo].[User]
-           ([Username]
-           ,[Password]
-           ,[UUID]
-           ,[LastLogin]
-           ,[Nick])
+        insert into  user
+           (user.username
+           ,user.password
+           ,user.nick
+          )
            VALUES
-            (#{id},#{pw},'test',getDate(),#{nick});
+            (#{id},#{pw},#{nick});
     </insert>
 
+    <!--converted to mysql-->
     <select id="login" parameterType="DB.DTO.UserInfoDTO" resultType="DB.DTO.UserDTO">
-SELECT TOP 10 [Id]
-      ,[Username]
-      ,[Password]
-      ,[UUID]
-      ,[LastLogin]
-      ,[Nick]
-  FROM [IHMHdb].[dbo].[User]
-  Where [Username]=#{id} And [Password]=#{pw}
+        SELECT
+          user.username
+          ,user.password
+          ,user.nick
+        FROM user
+        WHERE username=#{id} AND password=#{pw}
     </select>
 
+    <!-- deprecated-->
     <select id="searchImage" resultType="DB.DTO.ImageDTO" parameterType="String">
       SELECT
-      [AlbumImage]
-  FROM [IHMHdb].[dbo].[Music]
-  where [Id]=#{id}
+          album_image
+      FROM music
+      WHERE idx=#{id}
     </select>
 
     <select id="test" parameterType="java.lang.String" resultType="DB.DTO.testDTO">
-        SELECT
+      SELECT
             [Title],
 	        [AlbumName]
-          FROM [IHMHdb].[dbo].[Music]
-          WHERE [Title] =#{Title}
+        FROM [IHMHdb].[dbo].[Music]
+      WHERE [Title] =#{Title}
     </select>
 
+    <!--converted to mysql-->
     <select id="searchHistory" parameterType="DB.DTO.searchOffsetDTO" resultType="DB.DTO.HistroyDTO" >
-    Select   C.Title, C.AlbumName,C.Artist,B.SearchDate,B.Location.Long as Longtitude, B.Location.Lat as Latitude, B.MusicId
-     From
-     [IHMHdb].[dbo].[User] as A Inner JOIN [IHMHdb].[dbo].[SearchHistory] as B on A.[Id] = B.[UserId]
-     Inner Join [IHMHdb].[dbo].[Music] as C on B.MusicId = C.Id
+        Select  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
+            From
+            user as A Inner JOIN search_history as B on A.idx = B.user_idx
+            Inner Join music as C on B.music_idx = C.idx
 
-     Where A.Username=#{id} order by B.SearchDate desc
-        	OFFSET #{offset} ROWS
-	FETCH NEXT #{limit} ROWS ONLY;
+        WHERE A.username=#{id} order by B.search_date desc LIMIT #{offset},#{limit}
+
     </select>
 
-
+    <!--converted to mysql-->
     <select id="searchmobileHistory" parameterType="java.lang.String" resultType="DB.DTO.mobileHistoryDTO" >
-        Select  C.Title, C.AlbumName,C.Artist,B.SearchDate,B.Location.Long as Longtitude, B.Location.Lat as Latitude, B.MusicId
-        From
-        [IHMHdb].[dbo].[User] as A Inner JOIN [IHMHdb].[dbo].[SearchHistory] as B on A.[Id] = B.[UserId]
-        Inner Join [IHMHdb].[dbo].[Music] as C on B.MusicId = C.Id
+        Select  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
+            From
+           user as A Inner JOIN search_history as B on A.idx = B.user_idx
+          Inner Join music as C on B.music_idx = C.idx
 
-        Where A.Username=#{id} order by B.SearchDate desc
+        WHERE A.username=#{id} order by B.search_date desc
     </select>
 
-    <select id="getIdList" parameterType="java.lang.String" resultType="java.lang.String">
-    SELECT
-      [Username]
-    FROM [IHMHdb].[dbo].[User]
-    where [Username]=#{id}
-    </select>
+    <!--deprecated-->
+    <!--<select id="getIdList" parameterType="java.lang.String" resultType="java.lang.String">-->
+    <!--SELECT-->
+      <!--[Username]-->
+    <!--FROM [IHMHdb].[dbo].[User]-->
+    <!--where [Username]=#{id}-->
+    <!--</select>-->
 
+    <!--TODO test needed-->
     <insert id="uploadHistory" parameterType="DB.DTO.UploadHistoryDTO">
 
-    INSERT INTO [IHMHdb].[dbo].[SearchHistory]
-               ([UserId]
-               ,[MusicId]
-               ,[Location]
-               ,[SearchDate])
+    INSERT INTO search_history
+               (user_idx
+               ,music_idx
+               ,latitude
+               ,longitude
+               ,search_date)
          VALUES
                (
-               (select top 1 [IHMHdb].[dbo].[User].[Id] from [IHMHdb].[dbo].[User] where [IHMHdb].[dbo].[User].[Username]=#{id})
+               (select user.idx from user where user.username=#{id} Limit 0,1)
                ,#{musicIdx}
-               ,geography::STGeomFromText('POINT('+ cast(#{latitude} as varchar(20))+' '+ cast(#{longitude} as varchar(20))+')', 4326)
-               ,SYSDATETIME())
+               ,#{latitude},#{longitude}
+               ,NOW())
 
     </insert>
 
+    <!--converted to mysql-->
     <select id="searchMusicByIdx" parameterType="java.lang.Integer" resultType="DB.DTO.MusicDTO">
 
-        SELECT TOP 1
-           [Title]
-         ,[Artist]
-         ,[AlbumName]
-        FROM [IHMHdb].[dbo].[Music]
-        WHERE [Id] =#{musicidx}
+        Select C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
+        From
+        user as A Inner JOIN search_history as B on A.idx = B.user_idx
+        Inner Join music as C on B.music_idx = C.idx
+
+        Where A.idx=#{musicidx}  order by B.search_date desc Limit 0,1
     </select>
 </mapper>

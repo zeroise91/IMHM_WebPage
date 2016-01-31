@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import DB.DAO.UserDAO;
 import DB.DTO.UserDTO;
+import org.apache.ibatis.jdbc.Null;
 import org.json.simple.JSONObject;
 
 @WebServlet(
@@ -37,11 +38,14 @@ public class LoginServlet extends HttpServlet {
         try{
             List<UserDTO> reslist = dao.checkLogin(id,pw);
             if(reslist.size()==1) {
+                   String nick= reslist.get(0).getNick();;
+
                 obj.put("status", "ok");
                 obj.put("id",id);
-                obj.put("nick",reslist.get(0).getNick());
+                obj.put("nick",nick);
                 request.getSession().setAttribute("id",id);
-                request.getSession().setAttribute("nick",reslist.get(0).getNick());
+                request.getSession().setAttribute("nick",nick);
+
             }
             else{
                 obj.put("status","no");

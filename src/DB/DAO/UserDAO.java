@@ -3,6 +3,7 @@ package DB.DAO;
 import Config.Config;
 import DB.DTO.UserDTO;
 import DB.DTO.UserInfoDTO;
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

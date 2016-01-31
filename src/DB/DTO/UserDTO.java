@@ -10,9 +10,7 @@ public class UserDTO {
     private String id =null;
     private String pw =null;
     private String nick=null;
-    private Timestamp timestamp= null;
-    private String uuid = null;
-    private Integer idx = null;
+
 
     public UserDTO(String id, String pw, String nick) {
         this.id = id;
@@ -20,29 +18,9 @@ public class UserDTO {
         this.nick = nick;
     }
 
-    public UserDTO(Integer idx,String id, String pw, String uuid, Timestamp timestamp, String nick) {
+    public UserDTO(String id, String pw) {
         this.id = id;
         this.pw = pw;
-        this.nick = nick;
-        this.timestamp = timestamp;
-        this.uuid = uuid;
-        this.idx = idx;
-    }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
     }
 
     public String getId() {

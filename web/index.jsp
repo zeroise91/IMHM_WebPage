@@ -85,10 +85,11 @@
         </div>
 
         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 background_image">
-
           <div class="row" >
             <form class ="form-signin cmxform" action="/mainview.jsp" method="post" id="loginform">
               <h2 class="form-signin-heading">Please sign in</h2>
+              <div id="alert_well"></div>
+
               <label for="inputEmail" class="sr-only">Email address</label>
               <input type="email" id="inputEmail" name="id" class="form-control" placeholder="Email address" autofocus required aria-required="true" >
 
@@ -195,8 +196,8 @@
       return true;
     }
     else {
-      alert(res.status);
-
+      $('#alert_well').addClass('alert alert-danger');
+      $('#alert_well').text('아이디 또는 비밀번호가 틀립니다');
       return false;
     }
   }

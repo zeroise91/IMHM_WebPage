@@ -24,8 +24,7 @@ public class mobileLoadHistoryServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         String id    = request.getParameter("id");
-//       int limit    = Integer.parseInt( request.getParameter("limit"));
-//       int offset   = Integer.parseInt( request.getParameter("offset"));
+
 
         MobileHistoryDAO dao= new MobileHistoryDAO();
         List<mobileHistoryDTO> res= dao.getHistroyList(id);

@@ -11,7 +11,7 @@
 <%
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
     response.setHeader("Pragma","no-cache");
-    System.out.println("SessionID: "+request.getSession().getId());
+//    System.out.println("SessionID: "+request.getSession().getId());
     String idparam=request.getParameter("id");
 
     String id=(String)request.getSession().getAttribute("id");
@@ -257,10 +257,10 @@
                                         var div2=document.createElement("div");//create a new div
                                         div2.innerHTML="<div class='thumbnail drop-shadow'>"+
                                         "<div class='row' >"+
-                                                "<div class='col-md-4'>"+
-                                                "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto;'>"+
+                                                "<div class='col-md-3'>"+
+                                                "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto; max-height: 300px'>"+
                                                 "</div>"+
-                                                "<div class='col-md-8'>"+
+                                                "<div class='col-md-9'>"+
                                                 "<div class='table-responsive'>"+
                                                 "<table class='table' style='border: none;'>"+
                                                 "<tbody><tr>"+
@@ -364,17 +364,7 @@
 <%
     }//end main block
     else{
-        response.sendRedirect("index.jsp");
-        %>
-            <!DOCTYPE html>
-            <html>
-                <head></head>
-                <body>
-                <h1>
-                   ID: <%=session.getAttribute("id")%>
-                </h1>
-                </body>
-            </html>
-        <%
+        response.sendRedirect("/");
+
     }
 %>
