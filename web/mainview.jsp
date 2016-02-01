@@ -258,7 +258,7 @@
                                         div2.innerHTML="<div class='thumbnail drop-shadow'>"+
                                         "<div class='row' >"+
                                                 "<div class='col-md-3'>"+
-                                                "<img class='img-responsive thumbnail' src='/loadimage?idx="+data.result[iter].musicIdx+"' alt='TEST' style='margin: 0 auto; max-height: 300px'>"+
+                                                "<img class='img-responsive thumbnail' src='http://evancho.ery.wo.tc:28273/music/image/"+data.result[iter].musicIdx+"/' alt='TEST' style='margin: 0 auto; max-height: 300px'>"+
                                                 "</div>"+
                                                 "<div class='col-md-9'>"+
                                                 "<div class='table-responsive'>"+
@@ -278,6 +278,10 @@
                                                 "<tr>"+
                                                 "<th class='row'>Date</th>"+
                                                 "<td>"+data.result[iter].search_date+"</td>"+
+                                                "</tr>"+
+                                                "<tr>"+
+                                                "<th class='row'>Genre</th>"+
+                                                "<td>"+data.result[iter].genre+"</td>"+
                                                 "</tr>"+
                                                 "<tr>"+
                                                 "<th class='row'>Location</th>"+

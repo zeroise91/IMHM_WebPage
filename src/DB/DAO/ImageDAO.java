@@ -24,14 +24,13 @@ public class ImageDAO {
 
     }
 
-    public List<ImageDTO> getImage(String id ){
+    public List<ImageDTO> getImage(Integer id ){
 
         List<ImageDTO> res=null;
-//        System.out.println(id);
         getSession();
-        res=session.selectList("searchImage",id);
+        res=session.selectOne("searchImage",id);
 
-//        System.out.println("ImageDTO from "+res+"is"+(res==null?true:false)+"count"+res.size());
+        System.out.println("ImageDTO from "+res+"is"+(res==null?true:false)+"count"+(res==null?0:res.size()));
         closeSession();
         return res;
     }

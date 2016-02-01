@@ -12,18 +12,20 @@ public class mobileHistoryDTO {
     private String albumname = null;
     private String artist= null;
     private Timestamp search_date= null;
-    private Double Longitude =null;
-    private Double Latitude =null;
+    private Float Longitude =null;
+    private Float Latitude =null;
     private Integer musicIdx=null;
+    private String genre=null;
 
-    public mobileHistoryDTO( String title, String albumname, String artist, Timestamp search_date, Double longtitude, Double latitude, Integer musicIdx) {
+    public mobileHistoryDTO(String title, String albumname, String artist, Timestamp search_date, Float longitude, Float latitude, Integer musicIdx, String genre) {
         this.title = title;
         this.albumname = albumname;
         this.artist = artist;
         this.search_date = search_date;
-        Longitude = longtitude;
+        Longitude = longitude;
         Latitude = latitude;
         this.musicIdx = musicIdx;
+        this.genre = genre;
     }
 
     public String getTitle() {
@@ -58,19 +60,19 @@ public class mobileHistoryDTO {
         this.search_date = search_date;
     }
 
-    public Double getLongitude() {
+    public Float getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(Float longitude) {
         Longitude = longitude;
     }
 
-    public Double getLatitude() {
+    public Float getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(Float latitude) {
         Latitude = latitude;
     }
 
@@ -82,6 +84,14 @@ public class mobileHistoryDTO {
         this.musicIdx = musicIdx;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
     @Override
     public String toString() {
         return "{" +
@@ -91,6 +101,7 @@ public class mobileHistoryDTO {
                 ", \"search_date\":\"" + DateFormatter.getInstance().format(search_date)+ '\"' +
                 ", \"longitude\":" + Longitude +
                 ", \"latitude\":" + Latitude +
+                " ,\"genre\":\"" + genre + '\"' +
                 ", \"musicIdx\":" + musicIdx +
                 '}';
     }

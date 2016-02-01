@@ -31,8 +31,9 @@ public class musicServelet extends HttpServlet {
         InputStream inputStream=null;
         SqlSession session =null;
         SqlSessionFactory sessionfactory=null;
-        JSONObject obj= new JSONObject();
+//        JSONObject obj= new JSONObject();
         MusicDTO dto=null;
+
         try {
             inputStream =  Resources.getResourceAsStream(Config.mybatispath);
              sessionfactory = new SqlSessionFactoryBuilder().build(inputStream);
@@ -42,11 +43,11 @@ public class musicServelet extends HttpServlet {
 
         } catch (IOException e) {
             e.printStackTrace();
-            obj.clear();
+            dto=null;
         }finally {
             session.close();
             inputStream.close();
-            response.getWriter().write(dto.toString());
+            response.getWriter().write((dto==null)?"{}":dto.toString());
         }
     }
 

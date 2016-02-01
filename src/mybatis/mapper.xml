@@ -4,13 +4,14 @@
 
     <!--converted to mysql-->
     <insert id="register" parameterType="DB.DTO.UserDTO">
-        insert into  user
-           (user.username
-           ,user.password
-           ,user.nick
-          )
-           VALUES
-            (#{id},#{pw},#{nick});
+        INSERT INTO  user
+            (
+               user.username
+               ,user.password
+               ,user.nick
+            )
+       VALUES
+        (#{id},#{pw},#{nick});
     </insert>
 
     <!--converted to mysql-->
@@ -19,45 +20,49 @@
           user.username
           ,user.password
           ,user.nick
-        FROM user
-        WHERE username=#{id} AND password=#{pw}
+        FROM
+            user
+        WHERE
+            username=#{id} AND password=#{pw}
     </select>
 
-    <!-- deprecated-->
-    <select id="searchImage" resultType="DB.DTO.ImageDTO" parameterType="String">
+    <select id="searchImage" resultType="DB.DTO.ImageDTO" parameterType="java.lang.Integer">
       SELECT
-          album_image
-      FROM music
+          music.album_image
+      FROM
+        music
       WHERE idx=#{id}
     </select>
 
-    <select id="test" parameterType="java.lang.String" resultType="DB.DTO.testDTO">
-      SELECT
-            [Title],
-	        [AlbumName]
-        FROM [IHMHdb].[dbo].[Music]
-      WHERE [Title] =#{Title}
-    </select>
+    <!-- deprecated-->
+    <!--<select id="test" parameterType="java.lang.String" resultType="DB.DTO.testDTO">-->
+      <!--SELECT-->
+            <!--[Title],-->
+	        <!--[AlbumName]-->
+        <!--FROM [IHMHdb].[dbo].[Music]-->
+      <!--WHERE [Title] =#{Title}-->
+    <!--</select>-->
 
     <!--converted to mysql-->
     <select id="searchHistory" parameterType="DB.DTO.searchOffsetDTO" resultType="DB.DTO.HistroyDTO" >
-        Select  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
+        Select  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx ,C.genre
             From
-            user as A Inner JOIN search_history as B on A.idx = B.user_idx
-            Inner Join music as C on B.music_idx = C.idx
+                user as A Inner JOIN search_history as B on A.idx = B.user_idx Inner Join music as C on B.music_idx = C.idx
 
-        WHERE A.username=#{id} order by B.search_date desc LIMIT #{offset},#{limit}
+        WHERE
+            A.username=#{id} order by B.search_date desc
+        LIMIT #{offset},#{limit}
 
     </select>
 
     <!--converted to mysql-->
     <select id="searchmobileHistory" parameterType="java.lang.String" resultType="DB.DTO.mobileHistoryDTO" >
-        Select  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
-            From
-           user as A Inner JOIN search_history as B on A.idx = B.user_idx
-          Inner Join music as C on B.music_idx = C.idx
+        SELECT  C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx ,C.genre
+            FROM
+                user as A Inner JOIN search_history as B on A.idx = B.user_idx Inner Join music as C on B.music_idx = C.idx
 
-        WHERE A.username=#{id} order by B.search_date desc
+        WHERE
+            A.username=#{id} order by B.search_date desc
     </select>
 
     <!--deprecated-->
@@ -68,7 +73,7 @@
     <!--where [Username]=#{id}-->
     <!--</select>-->
 
-    <!--TODO test needed-->
+    <!--test completed-->
     <insert id="uploadHistory" parameterType="DB.DTO.UploadHistoryDTO">
 
     INSERT INTO search_history
@@ -78,22 +83,22 @@
                ,longitude
                ,search_date)
          VALUES
-               (
-               (select user.idx from user where user.username=#{id} Limit 0,1)
-               ,#{musicIdx}
-               ,#{latitude},#{longitude}
-               ,NOW())
+           (
+             (SELECT user.idx from user where user.username=#{id} Limit 0,1)
+            ,#{musicIdx}
+            ,#{latitude},#{longitude}
+            ,NOW()
+           )
 
     </insert>
 
     <!--converted to mysql-->
     <select id="searchMusicByIdx" parameterType="java.lang.Integer" resultType="DB.DTO.MusicDTO">
 
-        Select C.title, C.album_name,C.artist,B.search_date,B.longitude as Longtitude, B.latitude as Latitude, B.music_idx
-        From
-        user as A Inner JOIN search_history as B on A.idx = B.user_idx
-        Inner Join music as C on B.music_idx = C.idx
-
-        Where A.idx=#{musicidx}  order by B.search_date desc Limit 0,1
+      Select music.title, music.artist, music.album_name from music where music.idx=#{musicidx} Limit 1;
     </select>
+
+    <update id="updateuuid" parameterType="DB.DTO.uuidDTO">
+        UPDATE user SET user.uuid=#{uuid} where user.username=#{id}
+    </update>
 </mapper>

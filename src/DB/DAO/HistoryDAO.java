@@ -41,6 +41,7 @@ public class HistoryDAO {
 //        if(localoffset==0)list.clear();
         closeSession();
 
+//        System.out.println(list.toString());
         return list;
 
     }
@@ -52,7 +53,6 @@ public class HistoryDAO {
         int res=  session.insert("uploadHistory", new UploadHistoryDTO(id, longitude, latitude, musicIdx));
         if (res==1)session.commit();
         else session.rollback();
-        System.out.println(res);
         closeSession();
         return res;
     }

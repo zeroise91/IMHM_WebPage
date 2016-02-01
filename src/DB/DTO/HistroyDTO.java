@@ -14,11 +14,12 @@ public class HistroyDTO {
     private String albumname = null;
     private String artist= null;
     private Timestamp search_date= null;
-    private Double Longtitude =null;
-    private Double Latitude =null;
+    private Float Longtitude =null;
+    private Float Latitude =null;
     private Integer musicIdx=null;
+    private String genre=null;
 
-    public HistroyDTO(String title, String albumname, String artist, Timestamp search_date, Double longtitude, Double latitude, Integer musicIdx) {
+        public HistroyDTO(String title, String albumname, String artist, Timestamp search_date, Float longtitude, Float latitude, Integer musicIdx, String genre) {
         this.title = title;
         this.albumname = albumname;
         this.artist = artist;
@@ -26,6 +27,7 @@ public class HistroyDTO {
         Longtitude = longtitude;
         Latitude = latitude;
         this.musicIdx = musicIdx;
+        this.genre=genre;
     }
 
     public String getTitle() {
@@ -60,19 +62,19 @@ public class HistroyDTO {
         this.search_date = search_date;
     }
 
-    public Double getLongtitude() {
+    public Float getLongtitude() {
         return Longtitude;
     }
 
-    public void setLongtitude(Double longtitude) {
+    public void setLongtitude(Float longtitude) {
         Longtitude = longtitude;
     }
 
-    public Double getLatitude() {
+    public Float getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(Float latitude) {
         Latitude = latitude;
     }
 
@@ -82,6 +84,14 @@ public class HistroyDTO {
 
     public void setMusicIdx(Integer musicIdx) {
         this.musicIdx = musicIdx;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
@@ -94,6 +104,7 @@ public class HistroyDTO {
                 ", \"Longtitude\":" + Longtitude +
                 ", \"Latitude\":" + Latitude +
                 ", \"musicIdx\":" + musicIdx +
+                ", \"genre\":\"" + genre + '\"' +
                 '}';
     }
 }

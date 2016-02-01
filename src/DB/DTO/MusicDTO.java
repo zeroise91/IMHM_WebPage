@@ -8,10 +8,10 @@ public class MusicDTO {
     private String artist =null;
     private String albumname =null;
 
-    public MusicDTO(String artist, String album, String title) {
+    public MusicDTO(String title, String artist, String albumname) {
         this.title = title;
         this.artist = artist;
-        this.albumname = album;
+        this.albumname = albumname;
     }
 
     public String getArtist() {
