@@ -11,7 +11,7 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <!--<property name="driver" value="com.mysql.jdbc.Driver"/>-->
-                <property name="url" value="jdbc:mysql://evancho.ery.wo.tc:33007/IMHM?useUnicode=true&amp;characterEncoding=UTF8&amp;"/>
+                <property name="url" value="secreet"/>
                 <property name="poolMaximumActiveConnections" value="50"/>
                 <property name="poolMaximumIdleConnections" value="20"/>
                 <property name="poolMaximumCheckoutTime" value="10000"/>
